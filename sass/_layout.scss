@@ -3,6 +3,8 @@
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
+  overflow: hidden;
+  border-radius: 6px;
 
   min-height: 50rem;
 }
@@ -36,7 +38,6 @@
   background-color: #fff;
 
   //test
-  background-color: orangered;
   height: 80rem;
   flex: 1;
 }

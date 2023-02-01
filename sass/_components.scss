@@ -6,7 +6,6 @@
 }
 
 
-
 //////////////////////////////////////
 // Search
 .search {
@@ -65,7 +64,6 @@
 }
 
 
-
 //////////////////////////////////////
 // User Navigation
 .user-nav {
@@ -120,10 +118,8 @@
 }
 
 
-
 //////////////////////////////////////
 // Side navigation
-
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
@@ -148,7 +144,8 @@
     transform: scaleY(0);
     transition: transform .2s,
                 width .4s cubic-bezier(1, 0, 0, 1) .2s,
-                background-color .1s;
+                background-color .1s
+    ;
   }
 
   &__item:hover::before,
@@ -183,13 +180,59 @@
 }
 
 
-
 //////////////////////////////////////
 // Side navigation
-
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+
+
+//////////////////////////////////////
+// Gallery
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+//////////////////////////////////////
+// Hotel overview
+.overview {
+  display: flex;
+
+  &__heading {
+
+  }
+
+  &__stars {
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+
+  }
+
+  &__rating {
+    &-count {
+
+    }
+
+    &-average {
+
+    }
+  }
 }
