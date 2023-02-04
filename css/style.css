@@ -148,6 +148,49 @@ body {
   justify-content: center;
   align-items: center;
 }
+.user-nav__user {
+  position: relative;
+}
+.user-nav__user__wrapper {
+  position: absolute;
+  width: 87%;
+  height: 100%;
+  top: 7rem;
+  right: 1rem;
+}
+.user-nav__user-menu {
+  margin-top: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--color-grey-light-2);
+  height: 0;
+  list-style: none;
+  box-shadow: var(--shadow-dark);
+  border-radius: 6px;
+  transition: all 0.7s cubic-bezier(0.15, 1.14, 0.83, 0.98);
+}
+.user-nav__user-menu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.user-nav__user-menu-item {
+  padding-left: 1rem;
+  padding-bottom: 0.3rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.user-nav__user-menu-item:hover {
+  background-color: var(--color-grey-light-3);
+  color: var(--color-primary);
+}
+.user-nav__user:hover .user-nav__user-menu {
+  visibility: visible;
+  opacity: 1;
+  width: 92%;
+  height: 13rem;
+}
 .user-nav__user-photo {
   height: 3.75rem;
   border-radius: 50%;
