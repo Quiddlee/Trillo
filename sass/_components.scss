@@ -534,10 +534,41 @@
 // Gallery
 .gallery {
   display: flex;
+  background-color: var(--color-primary-dark);
 
   &__photo {
     width: 100%;
     display: block;
+    transition: all .2s;
+
+    &:hover {
+      filter: blur(3px) brightness(0.5);
+    }
+
+    &:hover + .gallery__caption {
+      visibility: visible;
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__caption {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--color-grey-light-3);
+    pointer-events: none;
+    scale: 0.98;
+    transition: all .7s;
   }
 }
 
