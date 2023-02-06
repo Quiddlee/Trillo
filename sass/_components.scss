@@ -94,22 +94,13 @@
     position: relative;
 
     &:hover &__chat {
-      //left: -6.2rem;
       top: 7rem;
-
-      //visibility: visible;
-      //opacity: 1;
       height: 21rem;
     }
 
     &__chat {
-      //visibility: hidden;
-      //opacity: 0;
-
       display: flex;
       position: absolute;
-      //top: 7rem;
-      //left: 20rem;
       top: -14rem;
       left: -6.2rem;
       background-color: #fff;
@@ -122,18 +113,36 @@
       transition: all cubic-bezier(1,.66,.36,1.04) .7s; //cubic-bezier(1,.95,.36,1.04)
 
       &-contacts {
-        border-right: 1px solid rgba(0, 0, 0, .1);
         background-color: var(--color-grey-light-2);
 
         &-item {
           list-style: none;
           cursor: pointer;
           transition: all .2s;
-          padding: 1rem 2rem 1rem 1rem;
+          padding: 1.7rem .3rem 1rem 1.5rem;
           position: relative;
           border-right: 1px solid transparent;
-          width: 101%;
+          width: 100%;
           z-index: 5;
+          line-height: 1;
+
+          &-img {
+            position: absolute;
+            left: .5rem;
+            top: .5rem;
+            z-index: 1;
+            border: none !important;
+          }
+
+          span {
+            display: inline-block;
+            z-index: 10;
+            position: relative;
+            background-color: var(--color-grey-light-2);
+            border-radius: 100px;
+            padding: .5rem;
+            margin-left: .4rem;
+          }
 
           &:first-child {
             color: var(--color-primary);
@@ -142,14 +151,18 @@
             &:before {
               width: 100%;
             }
+
+            span {
+              background-color: #fff;
+            }
           }
 
           &:before {
+            content: '';
             position: absolute;
+            display: inline-block;
             left: 0;
             top: 0;
-            display: inline-block;
-            content: '';
             width: 0;
             height: 100%;
             background-color: #fff;
@@ -164,6 +177,10 @@
           &:hover {
             color: var(--color-primary);
             border-right: 1px solid #fff;
+          }
+
+          &:hover span {
+            background-color: #fff;
           }
         }
       }
@@ -181,29 +198,45 @@
 
           &-item {
             position: relative;
-            margin: 0 0 1.3rem 1rem;
-            padding: 0 1rem;
-            background-color: var(--color-grey-light-2);
+            margin: 0 0 .5rem 1rem;
+            padding: 0 2.4rem 0 1rem;
+            background-image: linear-gradient(to right, var(--color-grey-light-2), var(--color-grey-light-3));
             border-radius: 100px;
             line-height: 3rem;
+
+            .message-time {
+              position: absolute;
+              bottom: -.7rem;
+              right: .6rem;
+              font-size: .8rem;
+              font-weight: 300;
+            }
 
             &-date {
               font-size: 1.2rem;
               color: rgba(#999, .8);
-              margin: 1.7rem auto;
+              margin: 2rem 1rem 2.5rem 1.5rem;
               font-weight: 300;
             }
 
             &-user {
               background-color: var(--color-grey-light-2);
               position: absolute;
-              top: -1.6rem;
-              right: 0;
-              padding: 0 2.5rem 0 1rem;
+              top: -.6rem;
+              right: 1.3rem;
+              padding: 0 4rem 0 1rem;
+
+              .message-time {
+                position: absolute;
+                bottom: -.7rem;
+                right: 1.5rem;
+                font-size: .8rem;
+                font-weight: 300;
+              }
 
               &:after {
                 position: absolute;
-                right: 1rem;
+                right: .6rem;
                 bottom: .4rem;
                 display: inline-block;
                 content: '';
@@ -215,7 +248,7 @@
 
               &:before {
                 position: absolute;
-                right: 1.4rem;
+                right: 1rem;
                 bottom: .45rem;
                 display: inline-block;
                 content: '';
@@ -632,6 +665,11 @@
     width: 4rem;
     border-radius: 50%;
     border: 3px solid #fff;
+
+    &--friend {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
 
     &:not(:last-child) {
       margin-right: -2rem;
