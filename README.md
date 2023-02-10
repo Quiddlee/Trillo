@@ -1,6 +1,6 @@
 # Trillo | Advanced Html/Css course project
 
-**Preview: https://quiddlee.github.io/trillo**
+**Preview: https://quiddlee.github.io/Trillo**
 
 **Stack:**
 1. Html
